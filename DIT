@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -x
+
+git clone --depth 1 git@github.com:u-root/u-root
+go work init u-root
+
+set -e
+(cd u-root && GOARCH= GOOS= go build)
+./u-root/u-root 
+
+
