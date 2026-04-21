@@ -2,6 +2,8 @@
 
 k4s is short for KUTIES, which is Kubernetes plus U-root utiliTIES. 
 
+![The KUTIES logo](kuties.svg)
+
 ## How it works
 
 Kubernetes tools (e.g. runc) are integrated via the
@@ -28,4 +30,3 @@ compact, safe userland for LinuxBoot systems.
 It has been part of the standard server firmware at Google since 2021; ByteDance adopted it a few years later.
 k4s will allow us to integrate Kubernetes capabilities into firmware images, enabling the creation of diskless Kubernetes
 appliances.
-![The KUTIES logo](kuties.png)
