@@ -2,7 +2,7 @@ go 1.26.2
 
 use (
 	./containerd
-	./ocicrypt
+	./runc
 	./u-root
 )
 
