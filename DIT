@@ -4,12 +4,14 @@ set -x
 
 git clone --depth 1 git@github.com:u-root/u-root
 go work init u-root
-git clone --depth 1 git@github.com:k3s-io/k3s.git
+# git clone --depth 1 git@github.com:k3s-io/k3s.git
 git clone --depth 1 git@github.com:containerd/containerd
+git clone --depth 1 -b purego git@github.com:u-root/runc
 
 set -e
+(cd runc && go mod tidy)
+(cd containerd && go mod tidy)
 (cd u-root && go mod tidy && GOARCH= GOOS= go build)
-(cd k3s && go mod tidy)
-./u-root/u-root 
+./u-root/u-root -o initramfs.cpio u-root/cmds/core/* runc/ ./containerd/cmd/containerd
 
 

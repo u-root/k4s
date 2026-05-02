@@ -29,3 +29,6 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+runc
+container*
+u-root
