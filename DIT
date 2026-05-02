@@ -4,9 +4,12 @@ set -x
 
 git clone --depth 1 git@github.com:u-root/u-root
 go work init u-root
+git clone --depth 1 git@github.com:k3s-io/k3s.git
+git clone --depth 1 git@github.com:containerd/containerd
 
 set -e
-(cd u-root && GOARCH= GOOS= go build)
+(cd u-root && go mod tidy && GOARCH= GOOS= go build)
+(cd k3s && go mod tidy)
 ./u-root/u-root 
 
 
