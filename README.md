@@ -50,7 +50,7 @@ to fit in a flash part.
 | kind              | implementations         | notes |
 | ----------------- | ----------------------- | ----- |
 | front-end (API)   | kube-apiserver          |       |
-| backing store     | etcd                    |       |
+| backing store     | etcd, Kine              |       |
 | scheduler         | kube-scheduler          |       |
 | supervisor        | kube-controller-manager |       |
 
@@ -61,23 +61,42 @@ to fit in a flash part.
 | runner agent      | kubelet                 |       |
 | container runtime | CRI-O, containerd       |       |
 
+## Kubernetes distributions
+
+> [NOTE]
+>
+> All of the distros are bundling different default configurations as they deem
+> most suitable for their respective target audiences.
+
 ### k0s
 
-- [architecture](https://docs.k0sproject.io/stable/architecture/)
-
-more tbd
+While k0s stays closer to upstream Kubernetes, it still acts as a distribution
+by packaging components and managing resources like networking and control plane
+lifecycle.
+The [architecture](https://docs.k0sproject.io/stable/architecture/)
+documentation describes how the components are set up.
 
 ### k3s
 
-tbd
+k3s disables all alpha features and bundles additional components like Traefik
+and the Local Path Provisioner, which may not be required in all setups.
+Instead of etcd, it comes with Kine for the backing store by default.
+More details are in the [architecture](https://docs.k3s.io/architecture)
+documentation.
 
 ### KubeSolo
 
-tbd
+KubeSolo applies a number of patches to disable various features.
+It is single-node with clustering and HA logic removed.
+Like k3s, it bundles Kine as the backing store by default.
+More details are in the [documentation](https://kubesolo.io/documentation).
 
 ### Talos
 
-tbd
+Talos uses fully upstream builds of the basic components, with etcd for the
+backing store and containerd for the container runtime.
+It offers a CLI tool for cluster management, showcased in the documentation
+[overview](https://docs.siderolabs.com/talos/v1.12/overview/what-is-talos).
 
 ## On u-root
 
