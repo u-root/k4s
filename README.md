@@ -63,7 +63,7 @@ to fit in a flash part.
 
 ## Kubernetes distributions
 
-> [NOTE]
+> [!NOTE]
 >
 > All of the distros are bundling different default configurations as they deem
 > most suitable for their respective target audiences.
