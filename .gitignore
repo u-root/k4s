@@ -32,3 +32,5 @@ go.work.sum
 runc
 container*
 u-root
+flannel
+initram*cpio
