@@ -34,3 +34,4 @@ container*
 u-root
 flannel
 initram*cpio
+coredns
