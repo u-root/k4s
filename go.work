@@ -6,6 +6,7 @@ use (
 	./runc
 	./u-root
 	./coredns
+	./etcd/etcdctl
 )
 
 replace google.golang.org/genproto => google.golang.org/genproto v0.0.0-20240318140521-94a12d6c2237

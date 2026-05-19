@@ -35,3 +35,4 @@ u-root
 flannel
 initram*cpio
 coredns
+etcd
