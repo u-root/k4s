@@ -47,19 +47,19 @@ to fit in a flash part.
 
 ### Control Plane
 
-| kind              | implementations         | notes |
-| ----------------- | ----------------------- | ----- |
-| front-end (API)   | kube-apiserver          |       |
-| backing store     | etcd, Kine              |       |
-| scheduler         | kube-scheduler          |       |
-| supervisor        | kube-controller-manager |       |
+| kind              | implementations         |
+| ----------------- | ----------------------- |
+| front-end (API)   | [kube-apiserver](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/) |
+| backing store     | [etcd](https://etcd.io/), [Kine](https://github.com/k3s-io/kine) |
+| scheduler         | [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler/) |
+| supervisor        | [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/) |
 
 ### Node
 
-| kind              | implementations         | notes |
-| ----------------- | ----------------------- | ----- |
-| runner agent      | kubelet                 |       |
-| container runtime | CRI-O, containerd       |       |
+| kind              | implementations         |
+| ----------------- | ----------------------- |
+| runner agent      | [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) |
+| container runtime | [CRI-O](https://cri-o.io/), [containerd](https://containerd.io/) |
 
 ## Kubernetes distributions
 
